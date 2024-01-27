@@ -11,8 +11,6 @@ COPY package.json pnpm-lock.yaml ./
 RUN pnpm i
 # Copy app source
 COPY . .
-# Build the app
-# RUN pnpm run build
 # Designated to tell Nuxt to resolve a host address (Nuxt3 Docs)
 ENV HOST 0.0.0.0 
 # Override Chokidar pooling settings. It is important to make HMR work in WSL environment,

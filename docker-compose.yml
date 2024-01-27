@@ -1,16 +1,13 @@
-
 version: '3.4'
 services:
   nuxt:
-    container_name: nuxt-docker-hotreload
+    container_name: nuxt-docker
     restart: always
     build:
       context: .
       dockerfile: Dockerfile
     ports:
        - 3000:3000
-    env_file:
-      - ./.env
     volumes:
       - ./:/app
       - /app/node_modules
